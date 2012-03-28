@@ -4,6 +4,7 @@ gem 'rails', '3.2.2'
 gem 'execjs'
 gem 'therubyracer'
 gem 'jquery-rails'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -20,4 +21,3 @@ group :production do
 end
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'

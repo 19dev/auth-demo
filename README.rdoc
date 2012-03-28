@@ -1,0 +1,13 @@
+= Nasıl?
+
+User,
+
+  $ rails g model user email:string password_digest:string
+  $ vim app/models/user.rb
+  has_secure_password
+
+  $ rails g controller sessions new
+  $ vim 
+  $ vim app/views/sessions/new.html.erb
+
+

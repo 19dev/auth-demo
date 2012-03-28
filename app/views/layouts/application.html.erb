@@ -8,6 +8,16 @@
 </head>
 <body>
 
+  <p>
+    <% if @current_user  %>
+      Hoşgeldin <b><%= @current_user.username %></b> |
+      <%= link_to "Çıkış", logout_url %>
+    <% else %>
+      Giriş yapmamışsınız |
+      <%= link_to "Giriş yap", login_url %>
+    <% end %>
+  </p>
+
 <%= yield %>
 
 </body>

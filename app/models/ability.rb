@@ -8,7 +8,7 @@ class Ability
       can :read, Post
       can :manage, Post, :user_id => user.id
     else
-      # Guest user are not allowed
+      can :read, Post
     end
   end
 end

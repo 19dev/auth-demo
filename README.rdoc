@@ -2,7 +2,7 @@
 
 User,
 
-  $ rails g model user email:string password_digest:string
+  $ rails g model user username:string password_digest:string
   $ vim app/models/user.rb
   has_secure_password
 

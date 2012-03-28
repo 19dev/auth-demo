@@ -1,5 +1,14 @@
 = Nasıl?
 
+Post,
+
+  $ rails g scaffold post
+  $ rake db:migrate
+  $ rails s --binding=1.2.3.4 --port=3001
+  
+Test: http://1.2.3.4:3001/posts adresi üzerinde CRUD olanağı verir.
+Fakat herkese açıktır.
+
 User,
 
   $ rails g model user username:string password_digest:string
@@ -7,7 +16,7 @@ User,
   has_secure_password
 
   $ rails g controller sessions new
-  $ vim 
+  $ vim
   $ vim app/views/sessions/new.html.erb
 
 

@@ -10,7 +10,12 @@ Kodlar,
   $ rake db:seed
   $ rails s --binding=1.2.3.4 --port=3001
 
-Test: http://1.2.3.4:3001/
+Test
+
+- yerelde: http://1.2.3.4:3001/ veya
+
+- herokuda: http://cancan-role.herokuapp.com/
+
 
 Seed edilen kullanıcılar (ad:parola yetki),
 

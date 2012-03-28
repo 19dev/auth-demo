@@ -63,3 +63,6 @@ Test: http://1.2.3.4:3001/login adresine gidip "seyyah":"secret" çiftini
 deneyin.
 
 Cancan, https://github.com/seyyah/my-devise-cancan/tree/cancan
+
+Simple auth:
+http://jeremyjbarth.blogspot.com/2011/10/rails-31-simple-custom-authentication.html

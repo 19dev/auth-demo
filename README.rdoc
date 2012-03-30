@@ -59,10 +59,31 @@ Yeni kullanıcı,
   > User.create(:username => "seyyah", :password => "secret",
    :password_confirmation => "secret")
 
+Flash mesajlarını göstermek için,
+
+        $ vim app/views/layouts/application.html.erb
+        <div class="container" style="margin-bottom: 80px;" >
+           <div class="content">
+             <div class="row">
+               <div class="span9">
+                <% [:notice, :error, :alert].each do |level| %>
+                  <% unless flash[level].blank? %>
+                    <div data-alert="alert" class="alert alert-<%= level %> fade in">
+                        <a class="close" data-dismiss="alert" href="#">&times;</a>
+                        <%= content_tag :p, simple_format(flash[level]) %>
+                    </div>
+                   <% end %>
+                <% end %>
+               </div>
+           </div>
+        </div>
+
 Test: http://1.2.3.4:3001/login adresine gidip "seyyah":"secret" çiftini
 deneyin.
 
-Cancan, https://github.com/seyyah/my-devise-cancan/tree/cancan
+= Kaynaklar
 
-Simple auth:
-http://jeremyjbarth.blogspot.com/2011/10/rails-31-simple-custom-authentication.html
+- Cancan: <https://github.com/seyyah/my-devise-cancan/tree/cancan>
+
+- Simple auth:
+<http://jeremyjbarth.blogspot.com/2011/10/rails-31-simple-custom-authentication.html>

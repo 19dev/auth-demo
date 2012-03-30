@@ -85,9 +85,31 @@ izinsiz kullanıcılara bu linkler gösterilmesin,
 Test için http://1.2.3.4:3001/ adresine gidin, kullanıcı giriş yapar, yeni post
 oluşturur, oluşturduğunu düzenler/siler/görürken, diğerleri sadece görür.
 
-== Kaynakça
+Flash mesajlarını göstermek için,
 
-- auth dalı için: <https://github.com/seyyah/auth-demo/tree/auth>
+        $ vim app/views/layouts/application.html.erb
+        <div class="container" style="margin-bottom: 80px;" >
+           <div class="content">
+             <div class="row">
+               <div class="span9">
+                <% [:notice, :error, :alert].each do |level| %>
+                  <% unless flash[level].blank? %>
+                    <div data-alert="alert" class="alert alert-<%= level %> fade in">
+                        <a class="close" data-dismiss="alert" href="#">&times;</a>
+                        <%= content_tag :p, simple_format(flash[level]) %>
+                    </div>
+                   <% end %>
+                <% end %>
+               </div>
+           </div>
+        </div>
 
-- Orjinal metin:
-<https://github.com/NebJ/demo-devise-cancan/blob/master/README.rdoc>
+Test: http://1.2.3.4:3001/login adresine gidip "seyyah":"secret" çiftini
+deneyin.
+
+== Kaynaklar
+
+- Cancan: <https://github.com/seyyah/my-devise-cancan/tree/cancan>
+
+- Simple auth:
+<http://jeremyjbarth.blogspot.com/2011/10/rails-31-simple-custom-authentication.html>

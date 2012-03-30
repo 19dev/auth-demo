@@ -63,12 +63,12 @@ Owner/email alanı ekleyelim,
 
   $ vim app/views/posts/index.html.erb
   <th>Owner</th>
-  <td><%= post.user.email %></td>
+  <td><%= post.user.username %></td>
 
   $ vim app/views/posts/show.html.erb
   <p>
     <b>Owner:</b>
-    <%= @post.user.email %>
+    <%= @post.user.username %>
   </p>
 
   $ rake db:reset

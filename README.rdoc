@@ -15,7 +15,7 @@ Komutlar,
   $ rails generate migration AddUserOnPosts
   $ vim db/migrate/XXX_add_user_on_posts.rb
   def up
-    add_column :posts, :user_id, :reference
+    add_column :posts, :user_id, :integer
   end
   $ rake db:migrate
 

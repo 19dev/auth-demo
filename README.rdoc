@@ -85,28 +85,6 @@ izinsiz kullanıcılara bu linkler gösterilmesin,
 Test için http://1.2.3.4:3001/ adresine gidin, kullanıcı giriş yapar, yeni post
 oluşturur, oluşturduğunu düzenler/siler/görürken, diğerleri sadece görür.
 
-Flash mesajlarını göstermek için,
-
-        $ vim app/views/layouts/application.html.erb
-        <div class="container" style="margin-bottom: 80px;" >
-           <div class="content">
-             <div class="row">
-               <div class="span9">
-                <% [:notice, :error, :alert].each do |level| %>
-                  <% unless flash[level].blank? %>
-                    <div data-alert="alert" class="alert alert-<%= level %> fade in">
-                        <a class="close" data-dismiss="alert" href="#">&times;</a>
-                        <%= content_tag :p, simple_format(flash[level]) %>
-                    </div>
-                   <% end %>
-                <% end %>
-               </div>
-           </div>
-        </div>
-
-Test: http://1.2.3.4:3001/login adresine gidip "seyyah":"secret" çiftini
-deneyin.
-
 == Kaynaklar
 
 - Cancan: <https://github.com/seyyah/my-devise-cancan/tree/cancan>

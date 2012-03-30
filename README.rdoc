@@ -45,14 +45,14 @@ User,
   <% end %>
 
   $ vim config/routes.rb
-  resources :sessions_path
+  resources :sessions
   resources :posts
   get "login" => "sessions#new", :as => "login"
 
 Yeni kullanıcı,
 
   $ vim Gemfile
-  gem 'bcrypt-ruby', '~> 3.0.0'
+    gem 'bcrypt-ruby', '~> 3.0.0'
   $ bundle
 
   $ rails c

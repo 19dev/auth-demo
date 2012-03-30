@@ -36,6 +36,13 @@ Komutlar,
     ...
   end
 
+`current_user` yöntemini tanımlayalım,
+
+   $ vim app/controllers/application_controller.rb
+   def current_user                                                                                    
+     session[:user_id] ? @current_user ||= User.find(session[:user_id]) : nil                          
+   end
+
 Test için http://1.2.3.4:3001/ adresine gidin, kullanıcı giriş yapdığı halde
 sayfalara erişemediğini göreceksiniz, ability'yi ayarlayalım,
 

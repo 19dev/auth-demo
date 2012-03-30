@@ -89,5 +89,6 @@ oluşturur, oluşturduğunu düzenler/siler/görürken, diğerleri sadece görü
 
 - Cancan: <https://github.com/seyyah/my-devise-cancan/tree/cancan>
 
-- Simple auth:
-<http://jeremyjbarth.blogspot.com/2011/10/rails-31-simple-custom-authentication.html>
+- NebJ: devise+cancan:
+   <http://github.com/NebJ/demo-devise-cancan/blob/master/README.rdoc>
+

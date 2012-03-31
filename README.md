@@ -2,7 +2,7 @@
 
 Post,
 
-  $ rails g scaffold post
+  $ rails g scaffold post title:string content:text
   $ rake db:migrate
   $ rails s --binding=1.2.3.4 --port=3001
 
@@ -45,7 +45,7 @@ User,
   <% end %>
 
   $ vim config/routes.rb
-  resources :sessions_path
+  resources :sessions
   resources :posts
   get "login" => "sessions#new", :as => "login"
 

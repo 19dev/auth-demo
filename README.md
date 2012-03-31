@@ -1,5 +1,7 @@
 # Nasıl?
 
+GÜNCELLENECEK: https://github.com/19bal/vys_rails/blob/auth/README.md ile.
+
 Post,
 
     $ rails g scaffold post title:string content:text
@@ -12,6 +14,8 @@ Fakat herkese açıktır.
 User,
 
     $ rails g model user username:string password_digest:string
+    $ rake db:migrate
+
     $ vim app/models/user.rb
     has_secure_password
 
